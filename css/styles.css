@@ -25,15 +25,45 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 nav {
+  width: 100%;
   height: 80px;
-  background-color: #000;
+  background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
+  position: fixed;
+  overflow: hidden;
+  z-index: 10;
+}
+nav .left-shape {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-color: #48225a;
+  left: -50px;
+  transform: skew(-25deg);
+  filter: drop-shadow(15px 0 0 #2F1F4D);
+}
+nav .right-shape {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  background-color: #48225a;
+  right: -30px;
+  transform: skew(-25deg);
+  filter: drop-shadow(-15px 0 0 #2F1F4D);
+}
+nav a {
+  z-index: 11;
 }
 nav a img {
   height: 60px;
+  filter: drop-shadow(0 0 0 #2F1F4D);
+  transition: filter 0.3s;
+}
+nav a img:hover {
+  filter: drop-shadow(5px 5px 0 #2F1F4D);
 }
 nav #right-nav {
   display: flex;
@@ -43,6 +73,11 @@ nav #right-nav a {
   text-decoration: none;
   color: #fff;
   font-family: LemonMilk;
+  filter: drop-shadow(0 0 0 #2F1F4D);
+  transition: filter 0.3s;
+}
+nav #right-nav a:hover {
+  filter: drop-shadow(5px 5px 0 #2F1F4D);
 }
 
 h1 {
@@ -51,11 +86,12 @@ h1 {
 
 .hero {
   width: 100%;
-  height: 600px;
+  height: 700px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/hero.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,12 +104,28 @@ h1 {
   border-bottom: 4px solid #fff;
   letter-spacing: 3px;
   margin-bottom: 50px;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .hero h2 {
   font-family: LemonMilkLight;
   font-size: 30px;
   color: #fff;
   letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeInAnimation ease 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .about {
@@ -93,6 +145,10 @@ h1 {
   background-repeat: no-repeat;
   border-radius: 100%;
   filter: drop-shadow(15px 15px 0 #2F1F4D);
+  transition: filter 0.3s;
+}
+.about .about-photo:hover {
+  filter: drop-shadow(15px 15px 0 #7c3182);
 }
 .about .about-text h1 {
   width: 300px;
@@ -112,7 +168,8 @@ h1 {
 
 .work-hero {
   width: 100%;
-  height: 300px;
+  height: 400px;
+  padding-top: 80px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/work-hero.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -147,9 +204,22 @@ h1 {
   background-repeat: no-repeat;
   border-radius: 10px;
   filter: drop-shadow(15px 15px 0 #2F1F4D);
+  transition: filter 0.3s;
+}
+.work-row .work-photo:hover {
+  filter: drop-shadow(15px 15px 0 #7c3182);
 }
 .work-row .grav-pong {
   background-image: url(../images/grav-pong.JPG);
+}
+.work-row .eventsy {
+  background-image: url(../images/eventsy.JPG);
+}
+.work-row .jungle-cook {
+  background-image: url(../images/jungle-cook.JPG);
+}
+.work-row .health {
+  background-image: url(../images/health.JPG);
 }
 .work-row .work-text h1 {
   width: 100%;
@@ -170,6 +240,8 @@ h1 {
 .contact {
   width: 100%;
   min-height: 100vh;
+  height: 800px;
+  padding-top: 80px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/contact.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -219,6 +291,33 @@ h1 {
   font-size: 20px;
   border-radius: 5px;
   font-family: Acumin;
+  transition: background-color 0.2s;
+}
+.contact #contact-submit:hover {
+  cursor: pointer;
+  background-color: #7c3182;
+}
+
+footer {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 20px;
+}
+footer p {
+  margin: 0;
+  font-family: Acumin;
+  color: #fff;
+}
+footer .social-media {
+  display: flex;
+  gap: 20px;
+}
+footer .social-media a i {
+  font-size: 30px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,24 @@
-<div class="contact">
+<form
+  class="contact"
+  action="mailto:logcdoug@iu.edu"
+  method="post"
+  enctype="text/plain"
+>
   <h1>Contact</h1>
-  <input class="contact-input" id="fn" type="text" placeholder="First Name" />
-  <input class="contact-input" id="ln" type="text" placeholder="Last Name" />
-  <input class="contact-input" id="email" type="email" placeholder="Email" />
-  <textarea id="message" placeholder="Message"></textarea>
+  <input
+    class="contact-input"
+    id="fn"
+    name="name"
+    type="text"
+    placeholder="Name"
+  />
+  <input
+    class="contact-input"
+    id="email"
+    name="mail"
+    type="email"
+    placeholder="Email"
+  />
+  <textarea id="message" name="comment" placeholder="Message"></textarea>
   <input type="submit" value="Send" id="contact-submit" />
-</div>
+</form>

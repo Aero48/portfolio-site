@@ -1,6 +1,7 @@
 .work-hero {
     width: 100%;
-    height: 300px;
+    height: 400px;
+    padding-top: 80px;
     background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(../images/work-hero.png); 
     background-position: center;
     background-repeat: no-repeat;
@@ -36,11 +37,29 @@
         background-repeat: no-repeat;
         border-radius: 10px;
         filter: drop-shadow(15px 15px 0 #2F1F4D);
+        transition: filter 0.3s;
+    }
+
+    .work-photo:hover {
+        filter: drop-shadow(15px 15px 0 #7c3182);
     }
 
     .grav-pong {
         background-image: url(../images/grav-pong.JPG);
     }
+
+    .eventsy {
+        background-image: url(../images/eventsy.JPG);
+    }
+
+    .jungle-cook {
+        background-image: url(../images/jungle-cook.JPG);
+    }
+
+    .health {
+        background-image: url(../images/health.JPG);
+    }
+
 
     .work-text {
         h1 {

@@ -1,6 +1,8 @@
 .contact{
     width: 100%;
     min-height: 100vh;
+    height: 800px;
+    padding-top: 80px;
     background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(../images/contact.png); 
     background-position: center;
     background-repeat: no-repeat;
@@ -54,5 +56,11 @@
         font-size: 20px;
         border-radius: 5px;
         font-family: Acumin;
+        transition: background-color 0.2s
+    }
+
+    #contact-submit:hover {
+        cursor: pointer;
+        background-color: #7c3182;
     }
 }

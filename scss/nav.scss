@@ -1,13 +1,47 @@
 nav {
+    width: 100%;
     height: 80px;
-    background-color: #000;
+    background-color: rgba(0,0,0,1);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
+
+    position:fixed;
+    overflow: hidden;
+
+    z-index: 10;
+
+    .left-shape {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        background-color: #48225a;
+        left: -50px;
+        transform: skew(-25deg);
+        filter: drop-shadow(15px 0 0 #2F1F4D);
+    }
+
+    .right-shape {
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        background-color: #48225a;
+        right: -30px;
+        transform: skew(-25deg);
+        filter: drop-shadow(-15px 0 0 #2F1F4D);
+    }
+
     a {
+        z-index: 11;
         img {
             height: 60px;
+            filter: drop-shadow(0 0 0 #2F1F4D);
+            transition: filter 0.3s;
+        }
+
+        img:hover {
+            filter: drop-shadow(5px 5px 0 #2F1F4D);
         }
     }
 
@@ -18,6 +52,12 @@ nav {
             text-decoration: none;
             color: #fff;
             font-family: LemonMilk;
+            filter: drop-shadow(0 0 0 #2F1F4D);
+            transition: filter 0.3s;
+        }
+
+        a:hover {
+            filter: drop-shadow(5px 5px 0 #2F1F4D);
         }
     }
 }
