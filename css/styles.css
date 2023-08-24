@@ -190,7 +190,7 @@ h1 {
 
 .work-row {
   width: 100%;
-  height: 500px;
+  height: 425px;
   background-color: #000;
   display: flex;
   align-items: center;
@@ -220,6 +220,9 @@ h1 {
 }
 .work-row .health {
   background-image: url(../images/health.JPG);
+}
+.work-row .allegion {
+  background-image: url(../images/allegion.png);
 }
 .work-row .work-text h1 {
   width: 100%;
