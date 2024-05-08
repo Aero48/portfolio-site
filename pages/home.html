@@ -1,18 +1,99 @@
-<div class="hero">
-  <h1>Logan Douglass</h1>
-  <h2>Full Stack Developer</h2>
-</div>
-<div class="about">
-  <a href="https://www.linkedin.com/in/logcdoug/"
-    ><div class="about-photo"></div
-  ></a>
-  <div class="about-text">
-    <h1>About Me</h1>
-    <p>
-      I am a student at IUPUI specializing in Full Stack Development. I am based
-      in Carmel, Indiana. I have profiency in HTML, CSS, and Javascript which
-      are all useful in developing both the frontend and backend for clients and
-      personal projects. This site showcases my work in web development.
-    </p>
+<div id="home">
+  <div class="hero">
+    <h1>Logan Douglass</h1>
+    <h2>Full Stack Developer</h2>
+  </div>
+  <div class="about">
+    <a href="https://www.linkedin.com/in/logcdoug/"
+      ><div class="about-photo"></div
+    ></a>
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>
+        I am a full stack developer based in Carmel, Indiana. I have profiency in HTML, CSS, and Javascript which
+        I utilize to create robust software solutions. I also have experience leveraging web analytics platforms such as Google Analytics and Microsoft PowerBI to create user friendly dashboards. I enjoy both the creative and logical sides of web development. This website showcases some of the projects I have worked on.
+      </p>
+    </div>
   </div>
 </div>
+
+<div id="work">
+  <div class="work-hero">
+    <h1>Projects</h1>
+  </div>
+  <div class="work-row">
+    <div class="work-text">
+      <h1>Kryptonite Website</h1>
+      <p>
+        I worked with a team to migrate the Kryptonite website content from an older version of Adobe Experience Manager to the latest. I authored many of the pages manually and ensured they were fully responsive and worked as intended.
+      </p>
+    </div>
+    <a href="https://www.kryptonitelock.com/en/home.html"
+      ><div class="work-photo kryptonite"></div
+    ></a>
+  </div>
+  <div class="work-row">
+    <div class="work-text">
+      <h1>US Allegion Website</h1>
+      <p>
+        I utilized Adobe Experience Manager, Bootstrap, and media queries to
+        develop a document library landing page for the current US Allegion
+        website. I also helped make the home page on the site fully responsive.
+      </p>
+    </div>
+    <a href="https://us.allegion.com/en/index.html"
+      ><div class="work-photo allegion"></div
+    ></a>
+  </div>
+  <div class="work-row">
+    <div class="work-text">
+      <h1>Jungle Cook</h1>
+      <p>
+        This was a collaborative project centered around creating a recipe browser
+        CRUD application. The site allows you to create, edit and delete new
+        recipes and loads page content dynamically.
+      </p>
+    </div>
+    <a href="https://aero48.github.io/jungle-cook-final/"
+      ><div class="work-photo jungle-cook"></div
+    ></a>
+  </div>
+  <div class="work-row">
+    <div class="work-text">
+      <h1>Gravitational Breakout</h1>
+      <p>
+        This is a small web game I made using the Javascript library p5.js. It
+        takes the premise of pong and adds gravity and more complex collision
+        detection.
+      </p>
+    </div>
+    <a href="https://aero48.github.io/final-project/"
+      ><div class="work-photo grav-pong"></div
+    ></a>
+  </div>
+</div>
+
+<form
+  class="contact"
+  action="mailto:logcdoug@iu.edu"
+  method="post"
+  enctype="text/plain"
+>
+  <h1>Contact</h1>
+  <input
+    class="contact-input"
+    id="fn"
+    name="name"
+    type="text"
+    placeholder="Name"
+  />
+  <input
+    class="contact-input"
+    id="email"
+    name="mail"
+    type="email"
+    placeholder="Email"
+  />
+  <textarea id="message" name="comment" placeholder="Message"></textarea>
+  <input type="submit" value="Send" id="contact-submit" />
+</form>

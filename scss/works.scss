@@ -1,7 +1,6 @@
 .work-hero {
     width: 100%;
-    height: 400px;
-    padding-top: 80px;
+    height: 300px;
     background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(../images/work-hero.png); 
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +16,6 @@
         color: #fff;
         border-bottom: 4px solid #fff;
         letter-spacing: 3px;
-        margin-bottom: 50px;
     }
 }
 
@@ -62,6 +60,10 @@
 
     .allegion {
         background-image: url(../images/allegion.png);
+    }
+
+    .kryptonite {
+        background-image: url(../images/kryptonite.png);
     }
 
 
