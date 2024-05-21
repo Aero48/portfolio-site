@@ -20,6 +20,7 @@ nav {
         left: -50px;
         transform: skew(-25deg);
         filter: drop-shadow(15px 0 0 #2F1F4D);
+        z-index: 8;
     }
 
     .right-shape {
@@ -30,6 +31,7 @@ nav {
         right: -30px;
         transform: skew(-25deg);
         filter: drop-shadow(-15px 0 0 #2F1F4D);
+        z-index: 8;
     }
 
     a {
@@ -48,6 +50,7 @@ nav {
     #right-nav {
         display: flex;
         gap: 50px;
+        align-items: center;
         a {
             text-decoration: none;
             color: #fff;
@@ -59,9 +62,96 @@ nav {
         a:hover {
             filter: drop-shadow(5px 5px 0 #2F1F4D);
         }
+
+        #hamburger-button{
+            visibility: hidden;
+            z-index: 11;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                color:white;
+                font-size: 40px;
+                filter: drop-shadow(0 0 0 #2F1F4D);
+                transition: filter 0.3s;
+            }
+            i:hover{
+                filter: drop-shadow(5px 5px 0 #2F1F4D);
+            }
+            cursor: pointer;
+        }
+    }
+
+    #hamburger-cover{
+        position:fixed;
+        background-color: black;
+        height: 60px;
+        width: 169px;
+        right:0;
+        top:0;
+        z-index: 7;
+    }
+
+    #hamburger-menu{
+        position: fixed;
+        right: 0;
+        top: 60px;
+        transition: top 0.5s;
+        z-index: 6;
+
+        display: flex;
+        flex-direction: column;
+        filter: drop-shadow(-15px 0 0 #2F1F4D);
+        display: none;
+
+        a{
+            height: 50px;
+            width: 154px;
+            background-color:#48225a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            
+            p {
+                margin: 0;
+                font-family: LemonMilk;
+                color: white
+            }
+        }
+    }
+
+    @media screen and (max-width: 626px){
+        height: 60px;
+
+        a {
+            img{
+                height: 50px;
+            }
+        }
+        #right-nav{
+            a{
+                display: none;
+            }
+
+            #hamburger-button{
+                visibility: visible;
+            }
+        }
+
+        .right-shape{
+            right: -260px
+        }
+
+        #hamburger-menu {
+            display: flex;
+        }
     }
 }
 
 h1 {
     font-family: LemonMilk;
 }
+

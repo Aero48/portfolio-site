@@ -44,6 +44,7 @@ nav .left-shape {
   left: -50px;
   transform: skew(-25deg);
   filter: drop-shadow(15px 0 0 #2F1F4D);
+  z-index: 8;
 }
 nav .right-shape {
   width: 400px;
@@ -53,6 +54,7 @@ nav .right-shape {
   right: -30px;
   transform: skew(-25deg);
   filter: drop-shadow(-15px 0 0 #2F1F4D);
+  z-index: 8;
 }
 nav a {
   z-index: 11;
@@ -68,6 +70,7 @@ nav a img:hover {
 nav #right-nav {
   display: flex;
   gap: 50px;
+  align-items: center;
 }
 nav #right-nav a {
   text-decoration: none;
@@ -78,6 +81,79 @@ nav #right-nav a {
 }
 nav #right-nav a:hover {
   filter: drop-shadow(5px 5px 0 #2F1F4D);
+}
+nav #right-nav #hamburger-button {
+  visibility: hidden;
+  z-index: 11;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+nav #right-nav #hamburger-button i {
+  color: white;
+  font-size: 40px;
+  filter: drop-shadow(0 0 0 #2F1F4D);
+  transition: filter 0.3s;
+}
+nav #right-nav #hamburger-button i:hover {
+  filter: drop-shadow(5px 5px 0 #2F1F4D);
+}
+nav #hamburger-cover {
+  position: fixed;
+  background-color: black;
+  height: 60px;
+  width: 169px;
+  right: 0;
+  top: 0;
+  z-index: 7;
+}
+nav #hamburger-menu {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  transition: top 0.5s;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(-15px 0 0 #2F1F4D);
+  display: none;
+}
+nav #hamburger-menu a {
+  height: 50px;
+  width: 154px;
+  background-color: #48225a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+nav #hamburger-menu a p {
+  margin: 0;
+  font-family: LemonMilk;
+  color: white;
+}
+@media screen and (max-width: 626px) {
+  nav {
+    height: 60px;
+  }
+  nav a img {
+    height: 50px;
+  }
+  nav #right-nav a {
+    display: none;
+  }
+  nav #right-nav #hamburger-button {
+    visibility: visible;
+  }
+  nav .right-shape {
+    right: -260px;
+  }
+  nav #hamburger-menu {
+    display: flex;
+  }
 }
 
 h1 {
@@ -127,6 +203,28 @@ h1 {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+@media screen and (max-width: 992px) {
+  .hero {
+    height: 400px;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 626px) {
+  .hero {
+    height: 250px;
+  }
+  .hero h1 {
+    font-size: 25px;
+  }
+  .hero h2 {
+    font-size: 12px;
+  }
+}
 
 .about {
   width: 100%;
@@ -165,6 +263,43 @@ h1 {
   font-size: 20px;
   line-height: 150%;
 }
+@media screen and (max-width: 992px) {
+  .about {
+    height: 300px;
+  }
+  .about .about-photo {
+    height: 200px;
+    width: 200px;
+  }
+  .about .about-text h1 {
+    font-size: 25px;
+    width: 200px;
+    margin-bottom: 15px;
+  }
+  .about .about-text p {
+    font-size: 16px;
+    max-width: 360px;
+  }
+}
+@media screen and (max-width: 626px) {
+  .about {
+    height: 550px;
+    flex-direction: column-reverse;
+  }
+  .about .about-photo {
+    height: 160px;
+    width: 160px;
+  }
+  .about .about-text h1 {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .about .about-text p {
+    font-size: 14px;
+    max-width: 300px;
+  }
+}
 
 .work-hero {
   width: 100%;
@@ -184,6 +319,22 @@ h1 {
   color: #fff;
   border-bottom: 4px solid #fff;
   letter-spacing: 3px;
+}
+@media screen and (max-width: 992px) {
+  .work-hero {
+    height: 200px;
+  }
+  .work-hero h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 626px) {
+  .work-hero {
+    height: 100px;
+  }
+  .work-hero h1 {
+    font-size: 25px;
+  }
 }
 
 .work-row {
@@ -239,6 +390,37 @@ h1 {
   font-family: Acumin;
   font-size: 20px;
   line-height: 150%;
+}
+@media screen and (max-width: 1080px) {
+  .work-row {
+    height: 260px;
+  }
+  .work-row .work-text h1 {
+    font-size: 25px;
+  }
+  .work-row .work-text p {
+    font-size: 16px;
+    max-width: 400px;
+  }
+  .work-row .work-photo {
+    width: 250px;
+    height: 175px;
+  }
+}
+@media screen and (max-width: 726px) {
+  .work-row {
+    height: fit-content;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .work-row .work-text h1 {
+    font-size: 20px;
+  }
+  .work-row .work-text p {
+    font-size: 14px;
+    max-width: 320px;
+  }
 }
 
 .contact {
@@ -300,6 +482,20 @@ h1 {
 .contact #contact-submit:hover {
   cursor: pointer;
   background-color: #7c3182;
+}
+@media screen and (max-width: 992px) {
+  .contact {
+    min-height: 300px;
+    padding-top: 40px;
+  }
+  .contact h1 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 626px) {
+  .contact {
+    height: 600px;
+  }
 }
 
 footer {

@@ -45,6 +45,30 @@
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }
+
+    @media screen and (max-width: 992px){
+        height: 400px;
+
+        h1{
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 626px){
+        height: 250px;
+
+        h1{
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: 12px;
+        }
+    }
 }
 
 .about {
@@ -86,6 +110,53 @@
             font-family: Acumin;
             font-size: 20px;
             line-height: 150%;
+        }
+    }
+
+    @media screen and (max-width: 992px){
+        height: 300px;
+
+        .about-photo{
+            height: 200px;
+            width: 200px;
+        }
+
+        .about-text {
+            h1 {
+                font-size: 25px;
+                width: 200px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 16px;
+                max-width: 360px;
+            }
+            
+        }
+    }
+
+    @media screen and (max-width: 626px){
+        height: 550px;
+        flex-direction: column-reverse;
+
+        .about-photo{
+            height: 160px;
+            width: 160px;
+        }
+
+        .about-text {
+            h1 {
+                font-size: 20px;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 14px;
+                max-width: 300px;
+            }
+            
         }
     }
 }

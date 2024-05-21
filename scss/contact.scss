@@ -63,4 +63,18 @@
         cursor: pointer;
         background-color: #7c3182;
     }
+
+    @media screen and (max-width: 992px){
+
+        min-height: 300px;
+        padding-top: 40px;
+        h1{
+            font-size: 25px;
+        }
+        
+    }
+
+    @media screen and (max-width: 626px){
+        height: 600px;
+    }
 }
