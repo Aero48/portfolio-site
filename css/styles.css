@@ -113,7 +113,7 @@ nav #hamburger-cover {
 nav #hamburger-menu {
   position: fixed;
   right: 0;
-  top: 60px;
+  top: -150px;
   transition: top 0.5s;
   z-index: 6;
   display: flex;
