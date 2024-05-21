@@ -17,7 +17,8 @@ nav {
         height: 200px;
         position: absolute;
         background-color: #48225a;
-        left: -50px;
+        left: -20px;
+        top: -120px;
         transform: skew(-25deg);
         filter: drop-shadow(15px 0 0 #2F1F4D);
         z-index: 8;
@@ -28,7 +29,8 @@ nav {
         height: 200px;
         position: absolute;
         background-color: #48225a;
-        right: -30px;
+        right: -55px;
+        top: -120px;
         transform: skew(-25deg);
         filter: drop-shadow(-15px 0 0 #2F1F4D);
         z-index: 8;
@@ -141,12 +143,17 @@ nav {
             }
         }
 
-        .right-shape{
-            right: -260px
-        }
-
         #hamburger-menu {
             display: flex;
+        }
+
+        .left-shape{
+            top: -140px;
+        }
+
+        .right-shape{
+            top: -140px;
+            right: -292px
         }
     }
 }
